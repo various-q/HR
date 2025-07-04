@@ -6,10 +6,13 @@ body { font-family: 'Tajawal', Arial, sans-serif; background: #f8fafc; }
 @media (min-width: 1600px) {
   .content-container { width: 75%; margin: 0 auto; }
 }
-@page { size: A4; margin: 1cm; }
+.content-container { padding: 2.5rem 1.5rem; }
+@page { size: A4; margin: 1.5cm; }
 @media print {
-  html, body { width: 210mm; height: 297mm; margin: 0; padding: 0; }
+  html, body { width: 210mm; height: 297mm; margin: 0; padding: 0; background: #fff !important; }
   .no-print { display: none !important; }
   .print-avoid-break { page-break-inside: avoid; }
   .print-break { page-break-before: always; }
+  .content-container { box-shadow: none !important; border-radius: 0 !important; width: 100% !important; padding: 0.5cm 0.7cm !important; }
+  section, header, table { page-break-inside: avoid; }
 } 
