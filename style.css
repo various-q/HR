@@ -60,4 +60,22 @@ body { font-family: 'Tajawal', Arial, sans-serif; background: #f8fafc; }
     min-width: 100px;
     padding: 0.4rem 0.7rem;
   }
+}
+
+.signature-section {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+@media print {
+  .signature-section {
+    margin-top: auto !important;
+    margin-bottom: 60px !important;
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #fff;
+    z-index: 10;
+  }
 } 
