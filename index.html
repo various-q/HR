@@ -12,23 +12,23 @@
 <body class="full-width-container bg-gray-50">
     <div class="content-container bg-white shadow-lg rounded-lg p-8 mt-8 mb-8">
         <!-- Header -->
-        <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+        <header class="bg-gradient-to-l from-blue-700 to-blue-400 text-white p-6 rounded-b-3xl shadow-lg flex flex-col md:flex-row items-center justify-between mb-8">
             <div>
-                <h1 class="text-3xl font-extrabold text-blue-800 mb-2 flex items-center gap-2">
-                    <i class="fa-solid fa-chart-line"></i>
+                <h1 class="text-2xl md:text-3xl font-extrabold flex items-center gap-2">
+                    <i class="fa-solid fa-star text-yellow-300"></i>
                     تقرير تقييم أداء الموظفين الأسبوعي
                 </h1>
-                <div class="text-gray-600 text-lg">القسم: الموارد البشرية / إدارة الجودة</div>
+                <div class="text-sm mt-2">القسم: الموارد البشرية / إدارة الجودة</div>
             </div>
-            <div class="no-print flex gap-2 mt-4 md:mt-0">
-                <button onclick="window.print()" class="bg-blue-700 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-900 transition">
-                    <i class="fa-solid fa-print"></i> طباعة / PDF
-                </button>
-                <button onclick="showHelp()" class="bg-gray-200 text-blue-700 px-4 py-2 rounded-lg shadow hover:bg-gray-300 transition">
-                    <i class="fa-solid fa-circle-info"></i> تعليمات
-                </button>
+            <div class="flex items-center gap-4 mt-4 md:mt-0">
+                <div class="bg-white text-blue-700 rounded-xl px-4 py-2 flex items-center gap-2 shadow">
+                    <i class="fa-solid fa-star text-yellow-400"></i>
+                    <span class="text-lg font-bold">4.35</span>
+                    <span class="text-xs">متوسط التقييم</span>
+                </div>
+                <!-- بطاقات أخرى للإحصائيات -->
             </div>
-        </div>
+        </header>
         <!-- Editable Info -->
         <div class="flex flex-col md:flex-row gap-4 mb-6">
             <div>
