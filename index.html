@@ -10,6 +10,26 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="full-width-container bg-gray-50">
+    <!-- مربع معلومات التقرير في الأعلى -->
+    <div class="report-info bg-white rounded-xl shadow p-4 mb-6 flex flex-col gap-2">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+            <div class="text-lg font-bold text-blue-900">تقرير تقييم أداء الموظفين الأسبوعي</div>
+            <div class="text-base text-gray-700">الجهة: مدرسة شمال جدة لتعليم قيادة السيارات</div>
+        </div>
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+            <div class="text-base text-gray-700">القسم: الموارد البشرية / إدارة الجودة</div>
+            <div class="text-base text-gray-700">التاريخ: 2025/07/04</div>
+        </div>
+    </div>
+    <!-- الهدف من التقرير -->
+    <section class="mb-8">
+        <h2 class="text-xl font-bold text-blue-700 mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-bullseye"></i> أولاً: الهدف من التقرير
+        </h2>
+        <p class="text-gray-700 leading-relaxed">
+            يهدف هذا التقرير إلى تقديم تحليل شامل لأداء الموظفين خلال الفترة من 29/06/2025 إلى 03/07/2025، بالاعتماد على تقييمات العملاء المباشرة واستبيانات الأداء، بهدف التعرف على مستوى جودة الخدمات المقدمة وتحديد نقاط القوة والضعف لكل موظف، مع تقديم توصيات للتحسين المستمر.
+        </p>
+    </section>
     <div class="content-container bg-white shadow-lg rounded-lg p-8 mt-8 mb-8">
         <!-- Header -->
         <header class="main-header bg-gradient-to-l from-blue-700 to-blue-400 text-white rounded-2xl shadow-lg flex flex-col items-center justify-center mb-8 p-4 md:p-6">
@@ -148,5 +168,18 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="assets/js/main.js"></script>
+    <!-- قسم التوقيع في نهاية الصفحة -->
+    <div class="flex flex-col items-center mt-16 mb-8">
+        <div class="flex flex-row justify-between w-full max-w-2xl">
+            <div class="flex flex-col items-center">
+                <span class="font-bold text-lg">المشرف</span>
+                <span class="font-bold">أ/ نايف الشهري</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="font-bold text-lg">مدير مدرسة شمال جدة لتعليم القيادة</span>
+                <span class="font-bold">أ/ جاسر فيصل العويضي</span>
+            </div>
+        </div>
+    </div>
 </body>
 </html> 
