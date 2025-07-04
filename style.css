@@ -63,11 +63,19 @@ body { font-family: 'Tajawal', Arial, sans-serif; background: #f8fafc; }
 }
 
 .signature-section {
-  margin-top: 150px;
+  margin-top: 250px;
   margin-bottom: 60px;
   background: #fff;
   box-shadow: none;
   border-radius: 0;
+}
+.signature-section .signature-line {
+  border: none;
+  border-top: 3px solid #e11d48;
+  width: 80%;
+  margin: 40px auto 0 auto;
+  height: 0;
+  background: none;
 }
 @media print {
   .signature-section {
@@ -82,5 +90,8 @@ body { font-family: 'Tajawal', Arial, sans-serif; background: #f8fafc; }
     z-index: 10;
     box-shadow: none !important;
     border-radius: 0 !important;
+  }
+  .signature-section .signature-line {
+    display: block;
   }
 } 
