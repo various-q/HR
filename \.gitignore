@@ -1,0 +1,12 @@
+# نظام التشغيل
+.DS_Store
+Thumbs.db
+
+# ملفات بيئة العمل
+node_modules/
+.env
+*.log
+
+# ملفات تحرير مؤقتة
+*.swp
+*.tmp 
