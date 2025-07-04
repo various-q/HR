@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقرير تقييم أداء الموظفين الأسبوعي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="full-width-container bg-gray-50">
+    <div class="content-container bg-white shadow-lg rounded-lg p-8 mt-8 mb-8">
+        <!-- Header -->
+        <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+            <div>
+                <h1 class="text-3xl font-extrabold text-blue-800 mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-chart-line"></i>
+                    تقرير تقييم أداء الموظفين الأسبوعي
+                </h1>
+                <div class="text-gray-600 text-lg">القسم: الموارد البشرية / إدارة الجودة</div>
+            </div>
+            <div class="no-print flex gap-2 mt-4 md:mt-0">
+                <button onclick="window.print()" class="bg-blue-700 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-900 transition">
+                    <i class="fa-solid fa-print"></i> طباعة / PDF
+                </button>
+                <button onclick="showHelp()" class="bg-gray-200 text-blue-700 px-4 py-2 rounded-lg shadow hover:bg-gray-300 transition">
+                    <i class="fa-solid fa-circle-info"></i> تعليمات
+                </button>
+            </div>
+        </div>
+        <!-- Editable Info -->
+        <div class="flex flex-col md:flex-row gap-4 mb-6">
+            <div>
+                <span class="font-bold">الفترة:</span>
+                <input id="dateFrom" type="date" class="border rounded px-2 py-1" value="2024-06-01">
+                إلى
+                <input id="dateTo" type="date" class="border rounded px-2 py-1" value="2024-06-07">
+            </div>
+            <div>
+                <span class="font-bold">اسم المعدّ:</span>
+                <input id="authorName" type="text" class="border rounded px-2 py-1" value="اسمك">
+            </div>
+        </div>
+        <!-- Sections -->
+        <section class="mb-8">
+            <h2 class="text-xl font-bold text-blue-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-clipboard-list"></i> أولاً: ملخص عام
+            </h2>
+            <p class="text-gray-700 leading-relaxed">
+                خلال هذا الأسبوع، تم جمع وتحليل نتائج استبيانات تقييم الأداء الخاصة بالموظفين، والتي تم ملؤها من قبل العملاء/الطلاب بعد تقديم الخدمة. يهدف هذا التقرير إلى قياس مستوى الرضا العام عن أداء الموظفين، وتحديد نقاط القوة والضعف، ورفع التوصيات المناسبة للتحسين المستمر.
+            </p>
+        </section>
+        <section class="mb-8 print-avoid-break">
+            <h2 class="text-xl font-bold text-blue-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-users"></i> ثانيًا: تحليل أداء الموظفين بناءً على الاستبيانات
+            </h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow">
+                    <thead class="bg-blue-100">
+                        <tr>
+                            <th class="py-2 px-4 border-b">اسم الموظف</th>
+                            <th class="py-2 px-4 border-b">القسم/المسمى</th>
+                            <th class="py-2 px-4 border-b">عدد التقييمات</th>
+                            <th class="py-2 px-4 border-b">متوسط التقييم (/5)</th>
+                            <th class="py-2 px-4 border-b">نقاط القوة</th>
+                            <th class="py-2 px-4 border-b">ملاحظات سلبية</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="py-2 px-4 border-b">محمد العصيمي</td>
+                            <td class="py-2 px-4 border-b">مدرب قيادة</td>
+                            <td class="py-2 px-4 border-b">3</td>
+                            <td class="py-2 px-4 border-b font-bold text-green-700">4.7</td>
+                            <td class="py-2 px-4 border-b">الالتزام بالمواعيد، أسلوب الشرح</td>
+                            <td class="py-2 px-4 border-b text-red-600">ملاحظة واحدة حول التأخير</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="py-2 px-4 border-b">عبدالله الغامدي</td>
+                            <td class="py-2 px-4 border-b">مدرب قيادة</td>
+                            <td class="py-2 px-4 border-b">2</td>
+                            <td class="py-2 px-4 border-b font-bold text-green-700">4.3</td>
+                            <td class="py-2 px-4 border-b">اللباقة وسرعة الاستجابة</td>
+                            <td class="py-2 px-4 border-b text-red-600">ملاحظات عن تاخير المواعيد</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="py-2 px-4 border-b">ابراهيم السلمي</td>
+                            <td class="py-2 px-4 border-b">مدرب قيادة</td>
+                            <td class="py-2 px-4 border-b">2</td>
+                            <td class="py-2 px-4 border-b font-bold text-yellow-700">3.9</td>
+                            <td class="py-2 px-4 border-b">افضل مدرب معي، أسلوب الشرح</td>
+                            <td class="py-2 px-4 border-b text-red-600">ضعف في التنظيم و الالفاظ</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="py-2 px-4 border-b">عبدالرحمن القرني</td>
+                            <td class="py-2 px-4 border-b">مدرب قيادة</td>
+                            <td class="py-2 px-4 border-b">1</td>
+                            <td class="py-2 px-4 border-b font-bold text-green-700">4.5</td>
+                            <td class="py-2 px-4 border-b">الاستقبال الممتاز والتعامل الراقي</td>
+                            <td class="py-2 px-4 border-b text-gray-500">لا توجد ملاحظات سلبية</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-xl font-bold text-blue-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-comments"></i> ثالثًا: أبرز الملاحظات العامة من العملاء
+            </h2>
+            <ul class="list-disc pr-6 text-gray-700 leading-relaxed">
+                <li>بعض العملاء اشتكوا من التأخير في المواعيد.</li>
+                <li>عدد قليل من العملاء ذكروا عدم وضوح بعض الوقت للتدريب في التطبيق (ينصح بتحديث الصور التوضيحية).</li>
+                <li>الإشادة بعدد من الموظفين على الأسلوب الراقي في التعامل والصبر أثناء التدريب.</li>
+            </ul>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-xl font-bold text-blue-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-lightbulb"></i> رابعًا: التوصيات والتحسينات المقترحة
+            </h2>
+            <ol class="list-decimal pr-6 text-gray-700 leading-relaxed">
+                <li>تحسين الرد السريع في قسم خدمة العملاء، خاصة في أوقات الذروة.</li>
+                <li>تنظيم ورشة عمل داخلية للمدربين لتحسين مهارات التواصل الفعّال مع المتدربين.</li>
+                <li>مكافأة الموظفين المتفوقين الذين حصلوا على أعلى تقييمات هذا الشهر لتحفيز بقية الفريق.</li>
+                <li>الاستمرار في جمع الملاحظات الدقيقة والعمل على تنفيذ التحديثات المطلوبة في التطبيق.</li>
+            </ol>
+        </section>
+        <section>
+            <h2 class="text-xl font-bold text-blue-700 mb-2 flex items-center gap-2">
+                <i class="fa-solid fa-check-circle"></i> خامسًا: الخلاصة
+            </h2>
+            <p class="text-gray-700 leading-relaxed">
+                يظهر من خلال نتائج هذا الأسبوع أن الأداء العام للموظفين جيد جدًا، مع متوسط تقييم إجمالي بلغ <span class="font-bold text-green-700">4.35/5</span>. ومع ذلك، هناك بعض الجوانب التي تحتاج إلى تحسين ومتابعة مستمرة، لا سيما في سرعة الرد والتواصل الفعّال. نوصي بالاستمرار في التقييم الأسبوعي لضمان جودة الخدمات والتحسين المستمر لأداء الموظفين.
+            </p>
+        </section>
+    </div>
+    <!-- Modal -->
+    <div id="helpModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-lg relative">
+            <button onclick="closeHelp()" class="absolute left-4 top-4 text-gray-400 hover:text-red-500 text-2xl">&times;</button>
+            <h3 class="text-xl font-bold mb-4 text-blue-700 flex items-center gap-2">
+                <i class="fa-solid fa-circle-info"></i> تعليمات استخدام التقرير
+            </h3>
+            <ul class="list-disc pr-6 text-gray-700 leading-relaxed">
+                <li>يمكنك تعديل التواريخ واسم المعدّ مباشرة من الأعلى.</li>
+                <li>لطباعة التقرير أو تصديره PDF، اضغط زر "طباعة / PDF".</li>
+                <li>التقرير متجاوب مع جميع الشاشات ومهيأ للطباعة بمقاس A4.</li>
+                <li>لأي استفسار أو دعم، تواصل مع قسم تقنية المعلومات.</li>
+            </ul>
+        </div>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 
